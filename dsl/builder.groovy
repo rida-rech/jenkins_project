@@ -107,15 +107,7 @@ class JobParameters {
 // ****************************
 
 def buildEveryDay = pipelineJob('BuildEveryDay') {
- properties {
-        pipelineTriggers {
-            triggers {
-               cron{
-                   spec("H 18 * * *")
-               }
-            }
-        }
-    }
+
     definition {
  
         cpsScm {
