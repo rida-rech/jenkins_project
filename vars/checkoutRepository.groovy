@@ -4,6 +4,7 @@ def call(commerceDir, branch, projectRepository) {
         repoDomainPart = projectRepository.substring(urlPrefix.size())
         repository = "https://github.com/SAP-samples/cloud-commerce-sample-setup.git"
         echo "##### Checkout repository #####"
+		 sh "curl ${repository}"
 		 sh "git clone ${repository} . && git fetch --all && git checkout origin/${branch}"       
     }
 }
