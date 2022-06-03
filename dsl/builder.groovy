@@ -1,8 +1,8 @@
-def pipelineRepo = 'https://github.com/SAP-samples/cloud-commerce-sample-setup'
-def projectRepo = 'https://github.com/rida-rech/jenkins_project.git'
-def projectTag = '${PROJECT_TAG}'
+def pipelineRepo = 'https://github.com/rida-rech/jenkins_project.git'
+def projectRepo = 'https://github.com/SAP-samples/cloud-commerce-sample-setup.git'
+def projectTag = 'projet'
 def sonarUrl = 'http://localhost:9000'
-def projectRepoName = 'https://github.com/SAP-samples/cloud-commerce-sample-setup/'
+def projectRepoName = 'cloud-commerce-sample-setup'
 def packageToTest = 'com.projectName.*'
 
 def subscriptionId = '${SUBSCRIPTION_ID}'
