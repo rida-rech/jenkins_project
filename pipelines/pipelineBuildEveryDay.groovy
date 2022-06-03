@@ -1,5 +1,5 @@
 def relativeJunitLogsPath = 'core-customize/hybris/log/junit'
-def projectDir = "${WORKSPACE}"
+def projectDir = "${env.WORKSPACE}"
 
 pipeline {
     libraries {
@@ -21,7 +21,7 @@ pipeline {
         stage('Prepare') {
             steps {
                 script {
-                    projectDir = "${WORKSPACE}"
+                    projectDir = "${env.WORKSPACE}"
                 }
                 cleanWs()
                 checkoutRepository("${projectDir}", "${params.PROJECT_TAG}", "${params.PROJECT_REPO}")
