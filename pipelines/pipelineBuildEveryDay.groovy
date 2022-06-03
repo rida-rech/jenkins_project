@@ -3,7 +3,8 @@ def projectDir = "${env.WORKSPACE}"
 
 pipeline {
     libraries {
-        lib("shared-library@${params.LIBRARY_BRANCH}")
+        //lib("shared-library@${params.LIBRARY_BRANCH}")
+		lib("shared-library@main")
     }
     agent {
         node {
